@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cabin',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.5;
+    background: linear-gradient(50deg, #ee9032, #f16d52, #ec4a77, #a063aa,#7963aa, #4b6eb5, #109aaf,#07b89f, #6bb97f);
+    /* background: cornsilk; */
+    height: 100vh;
+    
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+@font-face { font-family: 'Ubuntu'; src: url('Ubuntu/Ubuntu-Bold.ttf'); } 
+@font-face { font-family: 'Ubuntu'; src: url('Ubuntu/Ubuntu-Light.ttf'); }
+@font-face { font-family: 'Ubuntu'; src: url('Ubuntu/Ubuntu-Medium.ttf'); }
+@font-face { font-family: 'Ubuntu'; src: url('Ubuntu/Ubuntu-Regular.ttf');}
+
+.wrapper{
+    padding: .8em;
+ 
+}
+
+.container{
+   
+}
+
+img{
+    max-width: 100%;
+}
+
+.header{
+    position: sticky;
+    top: 5px;
+    width: 98%;
+    margin-bottom: 1em;
+    z-index: 2;
+}
+
+.header2{
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 1em; */
+}
+
+#scrollBg{
+    position: sticky;
+    height:2.5em ;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* background: lightskyblue; */
+    display: none;
+}
+
+#fixedBottomBg{
+    position: fixed;
+    height:9em ;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    /* background: lightskyblue; */
+    display: none;
+}
+
+.primaryCtrl{
+    align-items: center;
+}
+
+.primaryCtrl span{
+    cursor: pointer;
+}
+
+.secondaryCtrl{
+    align-items: center;
+}
+
+.secondaryCtrl span{
+    cursor: pointer;
+}
+
+.secItem + .secItem{
+    margin-left: 1em;
+}
+
+.options{
+    position: absolute;
+    left: 78%;
+    height: 12em;
+    width: 20%;
+    background: white;
+    border-radius: 10px;
+    padding: .6em;
+    /* opacity:1;
+    transition: all 5s ease-in; */
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+
+.options a{
+    font-size: .9em;
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 1em;
+    font-family: 'Ubuntu';
+}
+
+.volumee{
+    position: absolute;
+    left: 5%;
+    height: 2em;
+    width: 90%;
+    background: white;
+    padding: 0 .4em;
+    border-radius: 25px;
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.searchbar{
+    width: 100%;
+    height: 51px;
+    background: #fff;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 4;
+    transition: 0.5s;
+}
+
+.searchbar .fas{
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 30%;
+    margin-left: 35%;
+
+}
+
+.back{
+    width: 55px;
+    height: 51px;
+}
+
+.inputDiv{
+    width: 100%;
+}
+
+#inp{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 51px;
+    font-size: 1em;
+    padding-left: .8em;
+}
+
+/* .icon{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+.show2{
+    display: block;
+}
+
+.volumee input{
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+}
+
+
+
+.listHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listHeading .fas{
+    cursor: pointer;
+}
+
+th{
+    width: 30%;
+    padding: .4em 0;
+    /* border: 2px solid red; */
+    border-radius: 5px;   
+}
+
+th:last-child{
+    width: 50%;
+}
+
+tbody{
+    
+}
+
+.eachSong{
+    /* border: 2px solid red; */
+    margin-bottom: 8em;
+}
+
+.eachSong .tbody img{
+    /* height: 50px; */
+    border-radius: 10px;
+    width: 50%;
+}
+
+.eachSong .tbody .songTitle{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.eachSong .tbody span{
+    display: block;
+    font-size: .8em;
+    font-weight: 100;
+}
+
+.tbody strong .songT{
+    font-family: 'Ubuntu';
+}
+
+.eachSong .tbody td:last-child{
+    /* border: 2px solid red; */
+}
+
+.eachSong .tbody td:last-child .fas{
+    margin-left: 12em;
+    cursor: pointer;
+}
+
+.eachSong tbody:last-of-type{
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+
+.imgDiv{
+    margin-top: 3em;
+    width: 30%;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 2px solid darkblue; */
+    text-align: center;
+}
+
+.imgDiv img{
+    border-radius: 10px;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .clickoutDiv{
+    position: absolute;
+    width: 95%;
+    bottom: 10em;
+    height: 29.5em;
+} */
+
+
+.info{
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.fixedBottom{
+    /* border: 2px solid greenyellow; */
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    padding-bottom: .3em;
+    z-index: 2;
+    margin-left: 12px;
+    /* color:rgb(245, 220, 220); */
+}
+
+.listButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.listButtons span{
+    cursor: pointer;
+}
+
+.progressBar input{
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+}
+
+.progressTime{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .3em;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons span{
+    cursor: pointer;
+}
+
+.fa-play,
+.fa-repeat{
+    display: block;
+}
+.fa-pause,
+.fa-repeat-1{
+    display: none;
+}
+
+.playpause.active .fa-play{
+    display: none;
+}
+.playpause.active .fa-pause{
+    display: block;
+} 
+
+.repeat.active .fa-repeat{
+    display: none;
+}
+.repeat.active .fa-repeat-1{
+    display: block;
+}
+
+/* .listSong .active .fa-chevron-down{
+    display: none;
+}
+.listSong .active .fa-chevron-left{
+    display: block;
+} */
+
+
+
+
+
+.seekslider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: var(--color-text);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transform: scale(1);
+}
+.seekslider:active::-webkit-slider-thumb{
+    transform: scale(1.2);
+}
+
+/* .bar{
+    width: 50%;
+    height: 2px;
+    margin: auto;
+    background: var(--color-text);
+    border-radius: 25px;
+    position: absolute;
+    transform: translate(-50% , -50%) ;
+    left: 50%;
+    bottom: 1rem;
+    display: none;
+} */
+
+
+
+.gradient{
+    background: linear-gradient(50deg, #ee9032, #f16d52, #ec4a77, #a063aa,#7963aa, #4b6eb5, #109aaf,#07b89f, #6bb97f);
+    animation: movinggradient 5s ease infinite;
+    background-size: 600%;
+}
+
+@keyframes movinggradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:500px){
+
+    html, body {
+        height: 100vh;
+    }
+    html {
+        /* background:#7A991A; */
+        border-radius: 20px;
+        /* border: 2px solid orange; */
+     }
+    body {
+        background: linear-gradient(50deg, #ee9032, #f16d52, #ec4a77, #a063aa,#7963aa, #4b6eb5, #109aaf,#07b89f, #6bb97f);;
+        /* background-color:cornsilk; */
+        /* border: 2px solid red; */
+        
+        
+    }
+
+    .options{
+        left: 74%;
+        height: 13em;
+        width: 27%;
+        background: white;
+        border-radius: 10px;
+        padding: .6em;
+        /* opacity:1;
+        transition: all 5s ease-in; */
+    }
+
+    .imgDiv{
+        margin-top: 3em;
+        width: 85%;
+        height: 40vh;
+        margin-bottom: 1em;
+        /* border: 2px solid darkblue; */
+        
+    }
+    
+    .imgDiv img{
+        height: 40vh;
+    }
+
+    .eachSong{
+        overflow: hidden;
+    }
+
+    .eachSong .tbody img{
+        /* height: 50px; */
+        border-radius: 10px;
+        width: 85%;
+    }
+
+    .eachSong .tbody .songTitle{
+        font-size: 1em;
+        font-weight: 600;
+        width: 30%;
+        /* background: salmon; */
+        margin-right: 3em;
+        font-family: 'Ubuntu';
+        /* border: 2px solid blue; */
+    }
+
+    .eachSong .tbody span{
+        display: block;
+        font-size: .8em;
+        font-weight: 100;
+        font-family: 'Ubuntu';
+    }
+
+    .eachSong .tbody td {
+        /* border: 2px solid yellow; */
+    }
+
+    .eachSong .tbody td:last-child{
+        
+        /* border: 2px solid red; */
+    }
+
+    .eachSong .tbody td:last-child .fas{
+        margin-left: 3em;
+        cursor: pointer;
+    }
+
+    .eachSong tbody:last-of-type{
+        border: 2px solid red;
+        cursor: pointer;
+    }
+
+
+
+    .options{
+        left: 73%;
+        height: 10.5em;
+        width: 26%;
+        background: white;
+    }
+
+    .options a{
+        font-size: .8em;
+        color: black;
+    }
+    
+
+    .fixedBottom{
+        /* border: 2px solid greenyellow; */
+        position: fixed;
+        bottom: 0;
+        left: 5px;
+        width: 90%;
+        padding-bottom: 1.5em;
+    }
+
+    /* .bar{
+        border: 2px solid black;
+        display: block;
+        width: 50%;
+        height: 2px;
+        margin: auto;
+        background: var(--color-text);
+        border-radius: 25px;
+        position: fixed;
+        transform: translate(-50% , -50%) ;
+        left: 50%;
+        bottom: .3rem;
+    } */
+
+    .listButtons{
+        margin-bottom: .5em;
+    }
+
+    .buttons .playpause,.repeat{
+        margin-top: .2em;
+    }
+
+
+}

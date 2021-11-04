@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/43328f02cd.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Music Player</title>
+</head>
+<body id="body">
+    <div class="container" id="container">
+        <div id="scrollBg"></div>
+        <div class="wrapper" id="wrapper">
+            <div class="header">
+                <div class="header2">
+                    <div class="primaryCtrl">
+                        <span class="button listSong" id="listSong">
+                            <i  class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+        
+                    <div class="secondaryCtrl">
+                        <span class="button secItem" id="toggleVolume">
+                            <i class="fas fa-volume-up"></i>
+                        </span>
+                        <span class="button secItem">
+                            <i class="fas fa-moon"></i>
+                        </span>
+                        <span class="button secItem " id="toggleOption">
+                            <i class="fas fa-ellipsis-v clickOut"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="options clickOut" id="options">
+                <a href="#" class="clickOut" >Share</a>
+                <a href="#" class="clickOut">Track details</a>
+                <a href="#" class="clickOut">Album</a>
+                <a href="#" class="clickOut">Artist</a>
+                <a href="#" class="clickOut">Liked Songs</a>
+            </div>
+            
+            <div class="volumee " id="volum" onchange="setVolume()">
+                <input type="range" id="volumeSlider" class="volume-bar seekslider" min="0" max="100" value="0" step="1">
+            </div>
+
+            <!-- <div onclick="opensearch()" class="search icon"> 
+                <i class="material-icons">search</i>  
+            </div>  -->
+
+            <div id="sbar" class="searchbar" > 
+                <div onclick="closesearch()" class="back icon"> 
+                    <i class="fas fa-arrow-left"></i>
+                </div> 
+                <div class="inputDiv">
+                    <input  oninput="search()" placeholder="I Am still a noob😣" id="inp"> 
+                </div>
+            </div>
+
+            <div class="list" id="listId" style="display: none;">
+                <div class="eachSong">
+                    <table>
+                        <thead>
+                            <div class="listHeading">
+                                <div>
+                                    <h3>Samsung Music</h3>
+                                </div>
+                                <div onclick="opensearch()" class="search icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody  class="tbody listSong" id="tbody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="displayImage" id="displayImage">
+                <div class="imgDiv">
+                    <img src="1.jpg" alt="album" id="image" class="image">
+                </div>
+
+                <div class="info">
+                    <h2 id="playlistStatus">Fem</h2>
+                    <p id="playlistArtist">Davido</p>
+                </div>
+            </div>
+
+
+
+            
+            <!-- <div class="bar" id="bar"></div> -->
+            
+        </div>
+        <div class="fixedBottom" id="fixedBottom">
+            <div class="listButtons">
+                <span id="listbtn" class="list button button-md">
+                    <i class="fas fa-list"></i>
+                </span>
+                <span id="likebtn" class="like button button-md">
+                    <i class="fas fa-heart"></i>
+                </span>
+                <span id="plusbtn" class="plus button button-md">
+                    <i class="fas fa-plus"></i>
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div class="progressBar">
+                    <input type="range" id="seekslider" class="seekslider" min="0" max="100" value="0" step="1">
+                </div>
+                <div class="progressTime">
+                    <span id="currentTimeText" class="left">00:00</span>
+                    <span id="durationTimeText" class="right">00:00</span>
+                </div>
+            </div>
+            
+            <ul class="buttons">
+
+                <span id="random" class="shuffle button button-md">
+                    <i class="fas fa-random fa-sm"></i>
+                </span>
+                <span id="prevbtn" class="prev button button-md">
+                    <i class="fas fa-fast-backward"></i>
+                </span>
+                <span id="playpausebtn" class="playpause button button-md">
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-pause"></i>
+                </span>
+                <span id="nextbtn" class="next button button-md">
+                    <i class="fas fa-fast-forward"></i>
+                </span>
+                <span id="repeatbtn" class="repeat button button-md">
+                    <i class="fas fa-repeat"></i>
+                    <i class="fas fa-repeat-1"></i>
+                </span>
+            </ul>
+        </div>
+        <div id="fixedBottomBg"></div>
+    </div> 
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>  
